@@ -1,0 +1,16 @@
+program SotEstoque;
+
+uses
+  Forms,
+  uPadraoCadastro in 'uPadraoCadastro.pas' {frmPadraoCadastro},
+  uDM in 'uDM.pas' {dm: TDataModule},
+  uClienteCadastro in 'uClienteCadastro.pas' {frmClienteCadastro};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(Tdm, dm);
+  Application.CreateForm(TfrmClienteCadastro, frmClienteCadastro);
+  Application.Run;
+end.

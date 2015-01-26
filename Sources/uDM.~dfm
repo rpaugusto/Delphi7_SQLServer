@@ -1,0 +1,24 @@
+object dm: Tdm
+  OldCreateOrder = False
+  Left = 213
+  Top = 124
+  Height = 332
+  Width = 446
+  object conexao: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=SQLOLEDB.1;Password=sql2005;Persist Security Info=True;' +
+      'User ID=sa;Initial Catalog=estoque;Data Source=DETUPA-DT308\SQLE' +
+      'XPRESS'
+    LoginPrompt = False
+    Provider = 'SQLOLEDB.1'
+    Left = 56
+    Top = 24
+  end
+  object tbCliente: TADOTable
+    Connection = conexao
+    TableName = 'cliente'
+    Left = 56
+    Top = 88
+  end
+end
